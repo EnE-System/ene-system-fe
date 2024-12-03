@@ -19,7 +19,7 @@ To run the portfolio locally, follow these steps:
    ```
 2. Navigate to the project directory:
    ```sh
-   cd PortFolio
+   cd ene-system-fe
    ```
 3. Install dependencies:
    ```sh
