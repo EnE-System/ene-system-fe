@@ -4,6 +4,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import HomeLayout from "../layouts/HomeLayout";
 import Home from "../pages/Home";
+import UsersTable from "../pages/UsersTable";
 
 const AppRoutes = () => {
   return (
@@ -21,7 +22,8 @@ const AppRoutes = () => {
       />
       <Routes>
         <Route path="/" element={<HomeLayout />}>
-          <Route index element={<Home />} />
+          <Route index element={<Home />} /> 
+          <Route path ="/users"  element={<UsersTable/>}/>
         </Route>
       </Routes>
     </Router>
