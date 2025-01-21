@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'btn-color': "#FF9800",
-        'primary': "#4CAF50"
+        'primary': "#FF9800",
+        'secondary': "#4CAF50"
       },
     },
   },
