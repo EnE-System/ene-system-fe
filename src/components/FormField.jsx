@@ -13,10 +13,10 @@ const FormField = ({
   }) => {
     return (
       <div className="flex flex-col gap-2 w-full group">
-        <h1 className="text-sm font-medium text-color-light">{label}</h1>
+        <h1 className="text-sm font-medium text-primary">{label}</h1>
         {type === "input" ? (
           <div
-            className={`${style} relative text-color-light bg-inherit  duration-100 outline-none justify-between flex items-center gap-6 px-2  w-full rounded-md font-semibold border-2 border-color-light group-hover:border-color-primary-variant`}
+            className={`${style} relative text-slate-400 bg-inherit  duration-100 outline-none justify-between flex items-center gap-2 px-2  w-full rounded-md font-semibold border-2 border-slate-500 group-hover:border-primary`}
           >
             {icon && <p>{icon}</p>}
   
@@ -40,7 +40,7 @@ const FormField = ({
             placeholder={placeholder}
             onChange={onChange}
             value={values}
-            className="text-xs md:text-xs duration-150 w-full bg-inherit outline-none border-b rounded-xl border-2 group-hover:border-color-primary-variant px-6 py-4"
+            className="text-xs md:text-xs duration-150 w-full bg-inherit outline-none border-b rounded-xl border-2 group-hover:border-primary px-6 py-4"
           >
             {values}
           </textarea>
