@@ -27,7 +27,8 @@ const Welcome = () => {
         centeredSlides={true}
         autoplay={{
           delay: 3500,
-          disableOnInteraction: false,
+          disableOnInteraction: true,
+          pauseOnMouseEnter: true
         }}
         pagination={{
           clickable: true,
