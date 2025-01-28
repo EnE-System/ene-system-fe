@@ -15,7 +15,15 @@ const Login = () => {
 
   return (
     <div className="text-black grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div className="bg-primary relative p-8 flex flex-col justify-center items-center">
+      <div
+        className="bg-primary relative p-8 flex flex-col justify-center items-center bg-blend-overlay bg-opacity-90"
+        style={{
+          backgroundImage: `url(${images.shapes})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* <img src={images.logo1} alt="" /> */}
         <div className="flex items-start w-full">
           {/* Placeholder for logo */}
           <div className="flex absolute top-10 items-start w-full">
