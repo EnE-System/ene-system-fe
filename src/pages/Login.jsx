@@ -9,6 +9,7 @@ import { IoLocation } from "react-icons/io5";
 import { IoIosCall } from "react-icons/io";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaGooglePlusG } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [activeTab, setActiveTab] = useState("register");
@@ -174,7 +175,7 @@ const Login = () => {
                 type="submit"
                 className="bg-primary text-white p-2 flex justify-center items-center gap-3 rounded-full hover:bg-primary transition-colors"
               >
-                <span>Login</span>
+                <Link to="/dashboard">Login</Link>
 
                 <p>
                   <FaArrowRightLong />

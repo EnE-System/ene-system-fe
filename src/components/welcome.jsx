@@ -21,7 +21,7 @@ import Button from "./Button";
 import Login from "../pages/Login";
 const Welcome = () => {
   return (
-    <div className="pb-5 py-5">
+    <div className="py-5">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -34,11 +34,13 @@ const Welcome = () => {
           clickable: true,
         }}
         modules={[Autoplay]}
-        className="mySwiper"
+        className=" md:!mt-6 "
       >
         <SwiperSlide className="flex flex-col justify-center items-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
             <div className="flex flex-col gap-6 justify-between  ">
+              <div className="flex flex-col gap-6">
+
               <h1 className="text-4xl font-semibold text-black">
                 Optimize Your Energy, Minimize Your Costs
               </h1>
@@ -48,17 +50,18 @@ const Welcome = () => {
                 actionable insights to reduce energy consumption and lower
                 utility bills
               </p>
+              </div>
               <Button
                 title="Begin Your Energy Audit"
                 styles="!w-fit !bg-primary !scale-100 !rounded-full !text-white "
               />
             </div>
             <div>
-              <div className="h-full">
+              <div className="!h-[90vh] !w-full">
                 <img
                   src={images.image_one}
                   alt="Home_Image"
-                  className=" object-cover aspect-square rounded-2xl "
+                  className=" object-cover !w-full aspect-square rounded-2xl "
                 />
               </div>
             </div>
@@ -133,11 +136,11 @@ const Welcome = () => {
               />
             </div>
 
-            <div className="h-full w-full">
+            <div className="!h-[90vh] !w-full">
               <img
                 src={images.image_one}
                 alt="Home_Image"
-                className=" object-cover aspect-square rounded-2xl "
+                className=" object-cover !w-full aspect-square rounded-2xl "
               />
             </div>
           </div>
@@ -192,11 +195,11 @@ const Welcome = () => {
               />
             </div>
 
-            <div className="h-full w-full">
+            <div className="!h-[90vh] !w-full">
               <img
                 src={images.image_two}
                 alt="Home_Image"
-                className=" object-cover aspect-square rounded-2xl "
+                className=" object-cover !w-full aspect-square rounded-2xl "
               />
             </div>
           </div>
@@ -219,11 +222,12 @@ const Welcome = () => {
               />
             </div>
 
-            <div className="h-full w-full">
+            <div className="!h-[90vh] !w-full">
+
               <img
                 src={images.image_three}
                 alt="Home_Image"
-                className=" object-cover aspect-square rounded-2xl "
+                className=" object-cover !w-full aspect-square rounded-2xl "
               />
             </div>
           </div>
