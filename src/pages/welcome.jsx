@@ -5,18 +5,18 @@ import { images } from '../common'
 const Welcome = () => {
   const navigate = useNavigate()
   const [currentImage, setCurrentImage] = useState(0)
-  const [timeLeft, setTimeLeft] = useState(50)
+  const [timeLeft, setTimeLeft] = useState(20)
 
   useEffect(() => {
     // Image slider timer - changes every 5 seconds
     const sliderTimer = setInterval(() => {
       setCurrentImage(prev => prev === 0 ? 1 : 0)
-    }, 5000)
+    }, 2000)
 
     // Navigation timer
     const navigationTimer = setTimeout(() => {
-      navigate('/welcome/demos')
-    }, 50000)
+      navigate('/demos')
+    }, 20000)
 
     // Countdown timer
     const countdownTimer = setInterval(() => {
