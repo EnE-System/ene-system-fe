@@ -9,13 +9,22 @@ import { IoLocation } from "react-icons/io5";
 import { IoIosCall } from "react-icons/io";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaGooglePlusG } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [activeTab, setActiveTab] = useState("register");
 
   return (
     <div className="text-black grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div className="bg-primary relative p-8 flex flex-col justify-center items-center">
+      <div
+        className="bg-primary relative p-8 flex flex-col justify-center items-center bg-blend-overlay bg-opacity-90"
+        style={{
+          backgroundImage: `url(${images.shapes})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* <img src={images.logo1} alt="" /> */}
         <div className="flex items-start w-full">
           {/* Placeholder for logo */}
           <div className="flex absolute top-10 items-start w-full">
@@ -166,7 +175,7 @@ const Login = () => {
                 type="submit"
                 className="bg-primary text-white p-2 flex justify-center items-center gap-3 rounded-full hover:bg-primary transition-colors"
               >
-                <span>Login</span>
+                <Link to="/dashboard">Login</Link>
 
                 <p>
                   <FaArrowRightLong />
