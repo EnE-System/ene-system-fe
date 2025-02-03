@@ -1,5 +1,5 @@
 import React from "react";
-import { BarChart2, PieChart, CalendarClock, CircleDashed, CircleCheckBig, Vegan, Award, ChevronRight, SquareScissors, Zap, Medal, HandHelping } from "lucide-react";
+import { CalendarClock, CircleDashed, CircleCheckBig, Vegan, Award, ChevronRight, SquareScissors, Zap, Medal, HandHelping } from "lucide-react";
 import { Line, Pie } from "react-chartjs-2";
 import {  ArcElement, Tooltip, Legend, LineElement,  PointElement, CategoryScale, LinearScale } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";

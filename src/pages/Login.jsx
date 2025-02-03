@@ -40,10 +40,10 @@ const Login = () => {
             your details or create account to get started
           </p>
 
-          <div className="py-2 px-4 border-2 text-white border-white flex items-center gap-4 rounded-full text-sm hover:bg-white/10 cursor-pointer transition-colors">
+          <Link to="/demos" className="py-2 px-4 border-2 text-white border-white flex items-center gap-4 rounded-full text-sm hover:bg-white/10 cursor-pointer transition-colors">
             <span>Watch Demo Videos</span>
             <Video className="text-white" size={20} />
-          </div>
+          </Link>
         </div>
       </div>
       <div className="p-8">

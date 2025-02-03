@@ -15,7 +15,7 @@ const Welcome = () => {
 
     // Navigation timer
     const navigationTimer = setTimeout(() => {
-      navigate('/demos')
+      navigate('/admin')
     }, 20000)
 
     // Countdown timer
