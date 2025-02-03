@@ -1,9 +1,10 @@
 import React from "react";
+import { getCurrentYear } from "../utils/CurrentYear";
 
 const Footer = () => {
   return (
     <footer className="text-center py-4">
-      <p className="text-sm">© 2025 EnT Systems. All rights reserved.</p>
+      <p className="text-sm">© {getCurrentYear()} EnT Systems. All rights reserved.</p>
     </footer>
   );
 };

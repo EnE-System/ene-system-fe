@@ -21,7 +21,7 @@ import Button from "./Button";
 import Login from "../pages/Login";
 const Welcome = () => {
   return (
-    <div className="py-5">
+
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -236,7 +236,6 @@ const Welcome = () => {
           <Login />
         </SwiperSlide>
       </Swiper>
-    </div>
   );
 };
 

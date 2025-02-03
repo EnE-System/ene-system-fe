@@ -6,10 +6,7 @@ import HomeLayout from "../layouts/HomeLayout";
 import Home from "../pages/Home";
 import AdminLayout from "../layouts/AdminLayout";
 import DashboardPage from "../pages/admin/DashboardPage";
-import DashLayout from "../layouts/DashLayout";
 import Welcome from "../pages/welcome";
-import WelcomLayout from "../layouts/welcomLayout";
-import Dashboard from "../pages/dashboard";
 import NotFound from "../components/not-found";
 import DemoVideos from "../pages/demos";
 import VideoContent from "../components/VideoContent";
@@ -35,6 +32,8 @@ const AppRoutes = () => {
         {/* Public Routes */}
         <Route path="/" element={<HomeLayout />}>
           <Route index element={<Home />} />
+          <Route path="/welcome" element={<Welcome />} />
+
         </Route>
 
         {/* Admin Routes */}
@@ -46,9 +45,6 @@ const AppRoutes = () => {
             </AdminLayout>
           }
         />
-        <Route path="/welcome" element={<WelcomLayout />}>
-          <Route index element={<Welcome />} />
-        </Route>
         <Route path="/demos" element={<DemoVideos />}>
           <Route
             index
@@ -95,9 +91,6 @@ const AppRoutes = () => {
               />
             }
           />
-        </Route>
-        <Route path="/dashboard" element={<DashLayout />}>
-          <Route index element={<Dashboard />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
