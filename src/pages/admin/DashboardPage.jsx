@@ -24,6 +24,7 @@ import {
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import Chart from "chart.js/auto";
 import "chartjs-plugin-datalabels";
+import { useNavigate, useLocation } from "react-router-dom";
 
 Chart.register(
   ArcElement,
@@ -38,6 +39,14 @@ Chart.register(
 );
 
 const DashboardPage = () => {
+  const navigate = useNavigate();// Initialize useHistory hook
+  const location = useLocation();
+
+  const handleCompletedClick = () => {
+    navigate("/admin/completed-audits"); // Navigate to the Completed Audits page
+  };
+
+  const isActive = (path) => location.pathname === path;
   return (
     <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
       <div className="bg-white p-4 rounded-lg shadow mb-4">
@@ -46,7 +55,7 @@ const DashboardPage = () => {
           <h3 className="text-xl font-bold">Audit Summary</h3>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
-          <StatusCard icon={CircleCheckBig} title="Completed" count={15} color="green" />
+          <StatusCard icon={CircleCheckBig} title="Completed" count={15} color="green" onClick={handleCompletedClick} isActive={isActive("/admin/completed-audits")} />
           <StatusCard icon={CircleDashed} title="Ongoing" count={10} color="blue" />
           <StatusCard icon={CalendarClock} title="Pending" count={3} color="red" />
         </div>
@@ -101,9 +110,13 @@ const DashboardPage = () => {
   );
 };
 
-const StatusCard = ({ icon: Icon, title, count, color }) => {
+const StatusCard = ({ icon: Icon, title, count, color, onClick, isActive }) => {
   return (
-    <div className="bg-white p-4 rounded-2xl shadow flex flex-col items-center border border-gray-300">
+    <div
+      className={`bg-white p-4 rounded-2xl shadow flex flex-col items-center border border-gray-300 ${isActive ? "bg-gray-100" : "" // Apply active style
+        }`}
+      onClick={onClick}
+    >
       {/* Count (Top) */}
       <span className={`text-2xl font-bold text-${color}-600`}>{count}</span>
 
