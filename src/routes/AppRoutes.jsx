@@ -10,6 +10,7 @@ import Welcome from "../pages/welcome";
 import NotFound from "../components/not-found";
 import DemoVideos from "../pages/demos";
 import VideoContent from "../components/VideoContent";
+import CompletedAudits from "../pages/admin/CompletedAudit";
 
 const AppRoutes = () => {
   return (
@@ -37,14 +38,27 @@ const AppRoutes = () => {
         </Route>
 
         {/* Admin Routes */}
-        <Route
+        {/* <Route
           path="/admin"
           element={
             <AdminLayout>
               <DashboardPage />
+
             </AdminLayout>
           }
-        />
+        >
+          <Route
+            path="/admin/completed-audits"
+            element={
+              <CompletedAudits />
+            }
+          />
+        </Route> */}
+
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<DashboardPage />} /> {/* This will render by default when you access /admin */}
+          <Route path="completed-audits" element={<CompletedAudits />} />
+        </Route>
         <Route path="/demos" element={<DemoVideos />}>
           <Route
             index
