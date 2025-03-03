@@ -11,6 +11,10 @@ import NotFound from "../components/not-found";
 import DemoVideos from "../pages/demos";
 import VideoContent from "../components/VideoContent";
 import CompletedAudits from "../pages/admin/CompletedAudit";
+import NewAudit from "../pages/admin/NewAudit";
+import AuditCheckList from "../pages/admin/AuditCheckList";
+// import AuditCheckList from "../pages/admin/AuditCheckList";
+
 
 const AppRoutes = () => {
   return (
@@ -58,6 +62,8 @@ const AppRoutes = () => {
         <Route path="/admin" element={<AdminLayout />}>
           <Route index element={<DashboardPage />} /> {/* This will render by default when you access /admin */}
           <Route path="completed-audits" element={<CompletedAudits />} />
+          <Route path="audit/new" element={<NewAudit />} />
+          <Route path="audit/checklist" element={<AuditCheckList />} />
         </Route>
         <Route path="/demos" element={<DemoVideos />}>
           <Route

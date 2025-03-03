@@ -45,7 +45,9 @@ const DashboardPage = () => {
   const handleCompletedClick = () => {
     navigate("/admin/completed-audits"); // Navigate to the Completed Audits page
   };
-
+  const handleNewAuditClick = () => {
+    navigate("audit/new"); // Navigate to the Completed Audits page
+  };
   const isActive = (path) => location.pathname === path;
   return (
     <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
@@ -67,7 +69,7 @@ const DashboardPage = () => {
             <h3 className="text-xl font-bold">Quick Actions</h3>
           </div>
           <div className="grid grid-cols-1 gap-5">
-            <QuickActionCard icon={Vegan} title="New Audit" color="blue-500" bgColor="bg-blue-100" />
+            <QuickActionCard icon={Vegan} title="New Audit" color="blue-500" bgColor="bg-blue-100" onClick={handleNewAuditClick} />
             <QuickActionCard icon={Award} title="View Reports" color="green-600" bgColor="bg-gray-100" />
             <QuickActionCard icon={ChevronRight} title="Recommendations" color="white" bgColor="bg-blue-500" tColor="white" />
           </div>
@@ -129,7 +131,7 @@ const StatusCard = ({ icon: Icon, title, count, color, onClick, isActive }) => {
   );
 };
 
-const QuickActionCard = ({ icon: Icon, title, color, bgColor, tColor = "text-gray-900" }) => {
+const QuickActionCard = ({ icon: Icon, title, color, bgColor, onClick, tColor = "text-gray-900" }) => {
   return (
     <div className={`flex flex-col items-center p-4 rounded-2xl shadow-md ${bgColor}`}>
       {/* Icon on top */}
@@ -137,7 +139,7 @@ const QuickActionCard = ({ icon: Icon, title, color, bgColor, tColor = "text-gra
         <Icon className={`text-${color} text-4xl`} />
       </div>
       {/* Title below */}
-      <h3 className={`text-lg font-semibold ${tColor} mt-2`}>{title}</h3>
+      <h3 className={`text-lg font-semibold ${tColor} mt-2`} onClick={onClick}>{title}</h3>
     </div>
   );
 };

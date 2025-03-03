@@ -19,6 +19,8 @@ const AdminLayout = ({ children }) => {
   const pageTitles = {
     "/admin": "Dashboard",
     "/admin/completed-audits": "Completed Audits",
+    "audit/new": "New Audit",
+    "/admin/audit/checklist": "Audit CheckList",
     // Add other routes and their titles here
   };
 
